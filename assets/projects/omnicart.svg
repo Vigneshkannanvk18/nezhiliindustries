@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  <circle cx="200" cy="150" r="300" fill="#6366f1" opacity="0.08" filter="blur(80px)" />
+  <circle cx="1000" cy="500" r="350" fill="#a855f7" opacity="0.07" filter="blur(90px)" />
+
+  <!-- App Header -->
+  <rect x="40" y="30" width="1120" height="56" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1" />
+  <circle cx="70" cy="58" r="7" fill="#ef4444" />
+  <circle cx="95" cy="58" r="7" fill="#eab308" />
+  <circle cx="120" cy="58" r="7" fill="#22c55e" />
+  
+  <text x="160" y="63" fill="#f8fafc" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700">OmniCart Enterprise</text>
+  <rect x="330" y="44" width="280" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="62" fill="#94a3b8" font-family="sans-serif" font-size="12">🔍 Search orders, catalog, flash sales...</text>
+
+  <rect x="1000" y="43" width="130" height="30" rx="6" fill="url(#purpleGlow)" />
+  <text x="1030" y="62" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="600">+ Create Order</text>
+
+  <!-- Stat Cards -->
+  <!-- Stat 1 -->
+  <g filter="url(#shadow1)">
+    <rect x="40" y="110" width="260" height="110" rx="12" fill="#131d31" stroke="#253553" stroke-width="1" />
+    <text x="65" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">REAL-TIME GMV (24H)</text>
+    <text x="65" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">$1,482,920</text>
+    <text x="65" y="205" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">▲ +18.4% vs prev week</text>
+  </g>
+
+  <!-- Stat 2 -->
+  <g filter="url(#shadow1)">
+    <rect x="325" y="110" width="260" height="110" rx="12" fill="#131d31" stroke="#253553" stroke-width="1" />
+    <text x="350" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">ACTIVE CHECKOUTS</text>
+    <text x="350" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">4,892 / min</text>
+    <text x="350" y="205" fill="#06b6d4" font-family="sans-serif" font-size="12" font-weight="600">⚡ 99.99% Lock Accuracy</text>
+  </g>
+
+  <!-- Stat 3 -->
+  <g filter="url(#shadow1)">
+    <rect x="610" y="110" width="260" height="110" rx="12" fill="#131d31" stroke="#253553" stroke-width="1" />
+    <text x="635" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">EDGE RESPONSE (TTFB)</text>
+    <text x="635" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">184 ms</text>
+    <text x="635" y="205" fill="#a855f7" font-family="sans-serif" font-size="12" font-weight="600">🌐 CloudFront 98% Cache Hit</text>
+  </g>
+
+  <!-- Stat 4 -->
+  <g filter="url(#shadow1)">
+    <rect x="895" y="110" width="265" height="110" rx="12" fill="#131d31" stroke="#253553" stroke-width="1" />
+    <text x="920" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">INVENTORY LOCK HEALTH</text>
+    <text x="920" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">Optimal</text>
+    <text x="920" y="205" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">🔒 Zero Over-Allocations</text>
+  </g>
+
+  <!-- Main Chart Card -->
+  <g filter="url(#shadow1)">
+    <rect x="40" y="240" width="720" height="395" rx="14" fill="#131d31" stroke="#253553" stroke-width="1" />
+    <text x="65" y="275" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700">High-Concurrency Order Traffic & Conversion Rate</text>
+    <text x="65" y="295" fill="#94a3b8" font-family="sans-serif" font-size="12">Live metrics streamed via WebSocket and Redis Pub/Sub</text>
+
+    <!-- Grid lines -->
+    <line x1="65" y1="330" x2="720" y2="330" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="65" y1="390" x2="720" y2="390" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="65" y1="450" x2="720" y2="450" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="65" y1="510" x2="720" y2="510" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="65" y1="570" x2="720" y2="570" stroke="#253553" stroke-width="1" />
+
+    <!-- Wave Chart Path 1 -->
+    <path d="M 65 520 Q 150 480, 230 420 T 380 440 T 500 360 T 630 330 T 720 310 L 720 570 L 65 570 Z" fill="url(#purpleGlow)" opacity="0.25" />
+    <path d="M 65 520 Q 150 480, 230 420 T 380 440 T 500 360 T 630 330 T 720 310" fill="none" stroke="#a855f7" stroke-width="3" />
+
+    <!-- Wave Chart Path 2 (Orders) -->
+    <path d="M 65 550 Q 160 510, 260 480 T 420 400 T 560 380 T 660 350 T 720 340" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-dasharray="6 3" />
+
+    <!-- Markers -->
+    <circle cx="500" cy="360" r="5" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+    <rect x="440" y="315" width="120" height="32" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1" />
+    <text x="450" y="335" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="600">Peak: 12.8k req/s</text>
+  </g>
+
+  <!-- Side Panel: Live Microservices Health -->
+  <g filter="url(#shadow1)">
+    <rect x="780" y="240" width="380" height="395" rx="14" fill="#131d31" stroke="#253553" stroke-width="1" />
+    <text x="805" y="275" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700">Service Mesh Cluster Status</text>
+    
+    <!-- Item 1 -->
+    <rect x="805" y="300" width="330" height="50" rx="8" fill="#1a253c" stroke="#2a3b5c" stroke-width="1"/>
+    <circle cx="825" cy="325" r="5" fill="#10b981" />
+    <text x="840" y="322" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Inventory-Service (Go)</text>
+    <text x="840" y="338" fill="#94a3b8" font-family="sans-serif" font-size="11">Redlock Latency: 1.2ms • 16 Pods</text>
+    <text x="1090" y="330" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">Healthy</text>
+
+    <!-- Item 2 -->
+    <rect x="805" y="360" width="330" height="50" rx="8" fill="#1a253c" stroke="#2a3b5c" stroke-width="1"/>
+    <circle cx="825" cy="385" r="5" fill="#10b981" />
+    <text x="840" y="382" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Payment-Gateway (Node/Stripe)</text>
+    <text x="840" y="398" fill="#94a3b8" font-family="sans-serif" font-size="11">Success: 99.98% • 12 Pods</text>
+    <text x="1090" y="390" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">Healthy</text>
+
+    <!-- Item 3 -->
+    <rect x="805" y="420" width="330" height="50" rx="8" fill="#1a253c" stroke="#2a3b5c" stroke-width="1"/>
+    <circle cx="825" cy="445" r="5" fill="#10b981" />
+    <text x="840" y="442" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Catalog-GraphQL (Apollo)</text>
+    <text x="840" y="458" fill="#94a3b8" font-family="sans-serif" font-size="11">Cache Hit: 94.2% • 8 Pods</text>
+    <text x="1090" y="450" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="700">Healthy</text>
+
+    <!-- Item 4 -->
+    <rect x="805" y="480" width="330" height="50" rx="8" fill="#1a253c" stroke="#2a3b5c" stroke-width="1"/>
+    <circle cx="825" cy="505" r="5" fill="#06b6d4" />
+    <text x="840" y="502" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Recommendation-AI (FastAPI)</text>
+    <text x="840" y="518" fill="#94a3b8" font-family="sans-serif" font-size="11">Vector Search: 8.4ms • 6 Pods</text>
+    <text x="1085" y="510" fill="#06b6d4" font-family="sans-serif" font-size="11" font-weight="700">Scaling</text>
+
+    <!-- Bottom summary badge -->
+    <rect x="805" y="550" width="330" height="60" rx="8" fill="#0c121e" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="825" y="575" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="600">⚡ Flash Sale Ready Protocol</text>
+    <text x="825" y="595" fill="#94a3b8" font-family="sans-serif" font-size="11">All 42 microservice nodes warmed up across 3 AWS AZs</text>
+  </g>
+</svg>

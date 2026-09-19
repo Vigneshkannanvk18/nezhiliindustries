@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="kbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="kbShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#kbBg)" />
+  <circle cx="250" cy="180" r="320" fill="#3b82f6" opacity="0.09" filter="blur(90px)" />
+  <circle cx="950" cy="450" r="300" fill="#10b981" opacity="0.08" filter="blur(80px)" />
+
+  <!-- App Header -->
+  <rect x="40" y="30" width="1120" height="56" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1" />
+  <circle cx="70" cy="58" r="7" fill="#ef4444" />
+  <circle cx="95" cy="58" r="7" fill="#eab308" />
+  <circle cx="120" cy="58" r="7" fill="#22c55e" />
+  <text x="160" y="63" fill="#f8fafc" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700">KubeFlow Ops - Multi-Cloud Orchestrator</text>
+  <rect x="520" y="44" width="150" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="535" y="62" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="600">● 14 Clusters Active</text>
+
+  <!-- Metric Badges Top -->
+  <g filter="url(#kbShadow)">
+    <!-- Card 1 -->
+    <rect x="40" y="110" width="260" height="110" rx="12" fill="#111c30" stroke="#1e2d4d" stroke-width="1" />
+    <text x="65" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">CLOUD COST OPTIMIZED</text>
+    <text x="65" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">-$42,800/mo</text>
+    <text x="65" y="205" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">▼ 35.2% via KEDA Rightsizing</text>
+
+    <!-- Card 2 -->
+    <rect x="325" y="110" width="260" height="110" rx="12" fill="#111c30" stroke="#1e2d4d" stroke-width="1" />
+    <text x="350" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">DRIFT RECONCILIATIONS</text>
+    <text x="350" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">1,489 auto-healed</text>
+    <text x="350" y="205" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="600">⚡ MTTR: 2.1 minutes</text>
+
+    <!-- Card 3 -->
+    <rect x="610" y="110" width="260" height="110" rx="12" fill="#111c30" stroke="#1e2d4d" stroke-width="1" />
+    <text x="635" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">EBPF NETWORK PACKETS</text>
+    <text x="635" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">8.4M / sec</text>
+    <text x="635" y="205" fill="#a855f7" font-family="sans-serif" font-size="12" font-weight="600">🔍 0 Kernel Overhead</text>
+
+    <!-- Card 4 -->
+    <rect x="895" y="110" width="265" height="110" rx="12" fill="#111c30" stroke="#1e2d4d" stroke-width="1" />
+    <text x="920" y="145" fill="#94a3b8" font-family="sans-serif" font-size="13" font-weight="500">K8S POD COMPLIANCE</text>
+    <text x="920" y="185" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800">100% Policy</text>
+    <text x="920" y="205" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="600">🛡️ SOC2 / CIS Benchmark</text>
+  </g>
+
+  <!-- Left: Multi-Cluster Topology Map -->
+  <g filter="url(#kbShadow)">
+    <rect x="40" y="240" width="620" height="395" rx="14" fill="#111c30" stroke="#1e2d4d" stroke-width="1" />
+    <text x="65" y="275" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700">Multi-Region Kubernetes Mesh Orchestration</text>
+    <text x="65" y="295" fill="#94a3b8" font-family="sans-serif" font-size="12">Autonomous drift correction and node group autoscaling</text>
+
+    <!-- Visual Clusters -->
+    <!-- AWS Cluster -->
+    <rect x="70" y="330" width="240" height="130" rx="10" fill="#17243c" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="85" y="355" fill="#60a5fa" font-family="sans-serif" font-size="13" font-weight="700">AWS us-east-1 (Primary)</text>
+    <text x="85" y="375" fill="#94a3b8" font-family="sans-serif" font-size="11">Pods: 420/450 • CPU: 68%</text>
+    <rect x="85" y="390" width="210" height="6" rx="3" fill="#0f172a" />
+    <rect x="85" y="390" width="145" height="6" rx="3" fill="#3b82f6" />
+    <text x="85" y="415" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="600">Status: Reconciled & In-Sync</text>
+    <text x="85" y="440" fill="#94a3b8" font-family="sans-serif" font-size="11">eBPF Telemetry: 0 packet drops</text>
+
+    <!-- GCP Cluster -->
+    <rect x="370" y="330" width="240" height="130" rx="10" fill="#17243c" stroke="#10b981" stroke-width="1.5" />
+    <text x="385" y="355" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="700">GCP europe-west3</text>
+    <text x="385" y="375" fill="#94a3b8" font-family="sans-serif" font-size="11">Pods: 280/300 • CPU: 54%</text>
+    <rect x="385" y="390" width="210" height="6" rx="3" fill="#0f172a" />
+    <rect x="385" y="390" width="115" height="6" rx="3" fill="#10b981" />
+    <text x="385" y="415" fill="#10b981" font-family="sans-serif" font-size="11" font-weight="600">Status: Auto-scaled (KEDA)</text>
+    <text x="385" y="440" fill="#94a3b8" font-family="sans-serif" font-size="11">eBPF Latency: 1.4ms</text>
+
+    <!-- Connecting Link -->
+    <line x1="310" y1="395" x2="370" y2="395" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" />
+    <circle cx="340" cy="395" r="4" fill="#38bdf8" />
+
+    <!-- On-prem Baremetal Cluster -->
+    <rect x="220" y="490" width="240" height="120" rx="10" fill="#17243c" stroke="#a855f7" stroke-width="1.5" />
+    <text x="235" y="515" fill="#c084fc" font-family="sans-serif" font-size="13" font-weight="700">Equinix Edge Metal</text>
+    <text x="235" y="535" fill="#94a3b8" font-family="sans-serif" font-size="11">GPU Nodes: 32 H100s • Mem: 82%</text>
+    <rect x="235" y="550" width="210" height="6" rx="3" fill="#0f172a" />
+    <rect x="235" y="550" width="170" height="6" rx="3" fill="#a855f7" />
+    <text x="235" y="575" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="600">Model Inference Engine Serving</text>
+
+    <!-- Connecting lines -->
+    <path d="M 190 460 L 190 550 L 220 550" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3 3" />
+    <path d="M 490 460 L 490 550 L 460 550" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- Right: Real-time Drift & Audit Log -->
+  <g filter="url(#kbShadow)">
+    <rect x="680" y="240" width="480" height="395" rx="14" fill="#111c30" stroke="#1e2d4d" stroke-width="1" />
+    <text x="705" y="275" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700">Real-Time Autonomous Drift Remediations</text>
+
+    <!-- Event 1 -->
+    <rect x="705" y="300" width="430" height="65" rx="8" fill="#162238" stroke="#253554" stroke-width="1" />
+    <text x="725" y="325" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="700">✓ [Auto-Healed] SecurityGroup Ingress Drift</text>
+    <text x="725" y="345" fill="#94a3b8" font-family="sans-serif" font-size="11">Reverted unauthorized port 22 open on AWS us-east-1 worker node in 850ms</text>
+
+    <!-- Event 2 -->
+    <rect x="705" y="380" width="430" height="65" rx="8" fill="#162238" stroke="#253554" stroke-width="1" />
+    <text x="725" y="405" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="700">⚡ [KEDA Autoscaler] Pod Count Scaled: 12 → 36</text>
+    <text x="725" y="425" fill="#94a3b8" font-family="sans-serif" font-size="11">Kafka topic queue depth exceeded 45,000 threshold. Consumer latency stabilized.</text>
+
+    <!-- Event 3 -->
+    <rect x="705" y="460" width="430" height="65" rx="8" fill="#162238" stroke="#253554" stroke-width="1" />
+    <text x="725" y="485" fill="#a855f7" font-family="sans-serif" font-size="12" font-weight="700">💰 [Cost Saver] Pod Memory Right-Sizing</text>
+    <text x="725" y="505" fill="#94a3b8" font-family="sans-serif" font-size="11">Reduced over-provisioned memory request for 40 idle batch pods. Saved $1,240.</text>
+
+    <!-- Event 4 -->
+    <rect x="705" y="540" width="430" height="65" rx="8" fill="#162238" stroke="#253554" stroke-width="1" />
+    <text x="725" y="565" fill="#10b981" font-family="sans-serif" font-size="12" font-weight="700">🛡️ [TLS Rotation] Cert-Manager Secret Renewed</text>
+    <text x="725" y="585" fill="#94a3b8" font-family="sans-serif" font-size="11">Let's Encrypt wildcard cert renewed 28 days prior to expiry across all 14 clusters</text>
+  </g>
+</svg>
