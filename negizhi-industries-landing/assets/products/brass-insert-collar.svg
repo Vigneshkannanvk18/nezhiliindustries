@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 55 400 245" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cadBg7" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+    <linearGradient id="brassGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fde047"/><stop offset="50%" stop-color="#ca8a04"/><stop offset="100%" stop-color="#854d0e"/></linearGradient>
+    <filter id="partShadow7" x="-10%" y="-10%" width="130%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#cadBg7)" rx="10" stroke="#cbd5e1" stroke-width="1.5"/>
+  
+  <g transform="translate(120, 70)" filter="url(#partShadow7)">
+    <rect x="20" y="30" width="120" height="110" rx="10" fill="#334155" stroke="#0066ff" stroke-width="2"/>
+    <rect x="55" y="10" width="50" height="150" rx="4" fill="url(#brassGold)" stroke="#fef08a" stroke-width="1.5"/>
+    <line x1="55" y1="30" x2="105" y2="30" stroke="#713f12" stroke-width="2"/>
+    <line x1="55" y1="50" x2="105" y2="50" stroke="#713f12" stroke-width="2"/>
+    <line x1="55" y1="70" x2="105" y2="70" stroke="#713f12" stroke-width="2"/>
+    <line x1="55" y1="90" x2="105" y2="90" stroke="#713f12" stroke-width="2"/>
+    <line x1="55" y1="110" x2="105" y2="110" stroke="#713f12" stroke-width="2"/>
+    <line x1="55" y1="130" x2="105" y2="130" stroke="#713f12" stroke-width="2"/>
+    <circle cx="80" cy="85" r="15" fill="#0f172a" stroke="#fef08a" stroke-width="1.5"/>
+    <text x="72" y="90" fill="#fde047" font-family="monospace" font-size="12" font-weight="bold">M8</text>
+  </g>
+</svg>
