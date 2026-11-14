@@ -126,7 +126,7 @@ if (!defined('ABSPATH')) {
   <!-- Main Navigation Header -->
   <header class="geo-header" id="headerNav">
     <div class="container geo-nav-container">
-      <a href="#hero" class="geo-brand" aria-label="Negizhi Industries Home"><img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo-horizontal-clean.png'); ?>" alt="Negizhi Industries - Precision Engineering Plastic Components" class="geo-brand-logo" /></a>
+      <a href="#hero" class="geo-brand" aria-label="Negizhi Industries Home"><img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo-horizontal-clean.png'); ?>" alt="Negizhi Industries - Precision Engineering Plastic Components" class="geo-brand-logo" /></a>
 
       <!-- Primary Navigation Links -->
       <nav class="geo-nav-menu" aria-label="Primary Navigation">
@@ -146,7 +146,7 @@ if (!defined('ABSPATH')) {
 
       <!-- Action Buttons -->
       <div class="geo-header-actions">
-        <a href"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'NEGIZHII.pdf'); ?>" download="Negizhi_Industries_Brochure.pdf" class="btn-geo-ghost" title="Download Official Company Brochure (PDF)">
+        <a href="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'NEGIZHII.pdf'); ?>" download="Negizhi_Industries_Brochure.pdf" class="btn-geo-ghost" title="Download Official Company Brochure (PDF)">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>PDF Profile</span>
         </a>
@@ -170,7 +170,7 @@ if (!defined('ABSPATH')) {
     <div class="drawer-content">
       <div class="drawer-header">
         <a href="#hero" class="drawer-brand" aria-label="Negizhi Industries">
-          <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo-horizontal-clean.png'); ?>" alt="Negizhi Industries Logo" class="drawer-logo" />
+          <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo-horizontal-clean.png'); ?>" alt="Negizhi Industries Logo" class="drawer-logo" />
         </a>
         <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu" type="button">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -206,7 +206,7 @@ if (!defined('ABSPATH')) {
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span>Direct Call: +91 86108 88097</span>
         </a>
-        <a href"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'NEGIZHII.pdf'); ?>" download="Negizhi_Industries_Brochure.pdf" class="btn-geo-ghost btn-full">
+        <a href="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'NEGIZHII.pdf'); ?>" download="Negizhi_Industries_Brochure.pdf" class="btn-geo-ghost btn-full">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>Download PDF Profile</span>
         </a>
@@ -379,7 +379,7 @@ if (!defined('ABSPATH')) {
             </div>
 
             <div class="geo-machine-viewport">
-              <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/extracted/highshine_machine_clean.jpg'); ?>" alt="Highshine HS-150 200 Ton Automatic Injection Moulding Machine at Negizhi Industries" class="geo-machine-img" />
+              <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/extracted/highshine_machine_clean.jpg'); ?>" alt="Highshine HS-150 200 Ton Automatic Injection Moulding Machine at Negizhi Industries" class="geo-machine-img" />
               <div class="geo-hud-scanline"></div>
 
               <!-- Interactive Hotspots -->
@@ -618,8 +618,8 @@ if (!defined('ABSPATH')) {
         <div class="master-showcase-banner">
           <div class="master-showcase-media">
             <picture>
-              <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/master-component-showcase.webp'); ?>" type="image/webp" />
-              <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/master-component-showcase.jpg'); ?>" alt="Negizhi Industries Complete Engineering Plastic Components Master Portfolio" class="master-showcase-img" loading="lazy" />
+              <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/master-component-showcase.webp'); ?>" type="image/webp" />
+              <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/master-component-showcase.jpg'); ?>" alt="Negizhi Industries Complete Engineering Plastic Components Master Portfolio" class="master-showcase-img" loading="lazy" />
             </picture>
             <div class="master-showcase-badge">
               <span class="status-indicator-dot"></span>
@@ -672,8 +672,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="mechanical">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/gear-delrin-helical.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/gear-delrin-helical.jpg'); ?>" alt="Precision Delrin Involute Spur and Helical Gear with Splined Hub" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/gear-delrin-helical.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/gear-delrin-helical.jpg'); ?>" alt="Precision Delrin Involute Spur and Helical Gear with Splined Hub" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">MECHANICAL TRANSMISSION</span>
             </div>
@@ -708,8 +708,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="mechanical">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/motor-cooling-fan-family.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/motor-cooling-fan-family.jpg'); ?>" alt="Industrial Motor Cooling Fan Cowls and High-Flow Impellers Set" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/motor-cooling-fan-family.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/motor-cooling-fan-family.jpg'); ?>" alt="Industrial Motor Cooling Fan Cowls and High-Flow Impellers Set" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">THERMAL AERODYNAMICS</span>
             </div>
@@ -744,8 +744,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="mechanical">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/pu-spider-couplings-family.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/pu-spider-couplings-family.jpg'); ?>" alt="Polyurethane Elastomer Flexible Spider Couplings" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/pu-spider-couplings-family.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/pu-spider-couplings-family.jpg'); ?>" alt="Polyurethane Elastomer Flexible Spider Couplings" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">SHOCK &amp; VIBRATION DAMPING</span>
             </div>
@@ -780,8 +780,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="mechanical">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/brass-insert-bracket.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/brass-insert-bracket.jpg'); ?>" alt="Threaded Brass Insert Overmoulded Structural Bracket" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/brass-insert-bracket.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/brass-insert-bracket.jpg'); ?>" alt="Threaded Brass Insert Overmoulded Structural Bracket" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">INSERT OVERMOULDING</span>
             </div>
@@ -816,8 +816,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="bushings">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/bearing-rollers-overmoulded.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/bearing-rollers-overmoulded.jpg'); ?>" alt="Precision Overmoulded Bearing Roller Wheels and Sleeve Bushings" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/bearing-rollers-overmoulded.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/bearing-rollers-overmoulded.jpg'); ?>" alt="Precision Overmoulded Bearing Roller Wheels and Sleeve Bushings" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">HEAVY DYNAMIC LOAD</span>
             </div>
@@ -852,8 +852,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="electrical">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/switchgear-terminal-enclosure.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/switchgear-terminal-enclosure.jpg'); ?>" alt="Glass-Filled Nylon Switchgear Terminal Housing" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/switchgear-terminal-enclosure.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/switchgear-terminal-enclosure.jpg'); ?>" alt="Glass-Filled Nylon Switchgear Terminal Housing" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">ELECTRICAL INSULATION</span>
             </div>
@@ -888,8 +888,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="electrical">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/optical-meter-cover.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/optical-meter-cover.jpg'); ?>" alt="Optical Polycarbonate (PC) Meter Covers" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/optical-meter-cover.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/optical-meter-cover.jpg'); ?>" alt="Optical Polycarbonate (PC) Meter Covers" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">OPTICAL &amp; IMPACT PROOF</span>
             </div>
@@ -924,8 +924,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="specialty">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/fluidic-connectors-plugs.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/fluidic-connectors-plugs.jpg'); ?>" alt="Precision Fluidic Barbed Connectors and Threaded Sealing Plugs" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/fluidic-connectors-plugs.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/fluidic-connectors-plugs.jpg'); ?>" alt="Precision Fluidic Barbed Connectors and Threaded Sealing Plugs" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">FLUIDIC SEALING</span>
             </div>
@@ -960,8 +960,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="specialty">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/threaded-pipe-caps.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/threaded-pipe-caps.jpg'); ?>" alt="HDPE Heavy Duty Threaded Protective Pipe and Flange Caps" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/threaded-pipe-caps.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/threaded-pipe-caps.jpg'); ?>" alt="HDPE Heavy Duty Threaded Protective Pipe and Flange Caps" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">CORROSION &amp; THREAD SHIELD</span>
             </div>
@@ -996,8 +996,8 @@ if (!defined('ABSPATH')) {
           <article class="product-card" data-cat="specialty">
             <div class="product-media-wrap">
               <picture>
-                <source srcset"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/alignment-bullet-pins.webp'); ?>" type="image/webp" />
-                <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/alignment-bullet-pins.jpg'); ?>" alt="Color Coded Precision Alignment Bullet Pins and Masking Plugs" class="product-img" loading="lazy" />
+                <source srcset="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/alignment-bullet-pins.webp'); ?>" type="image/webp" />
+                <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/products/alignment-bullet-pins.jpg'); ?>" alt="Color Coded Precision Alignment Bullet Pins and Masking Plugs" class="product-img" loading="lazy" />
               </picture>
               <span class="product-tag-badge">PRECISION TOOLING LOCATORS</span>
             </div>
@@ -1069,7 +1069,7 @@ if (!defined('ABSPATH')) {
           </div>
 
           <div class="about-card visual-card">
-            <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/extracted/virgin_polymer_pellets.jpg'); ?>" alt="100% Virgin engineering grade plastic pellets used at Negizhi Industries" class="about-img" loading="lazy" />
+            <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/extracted/virgin_polymer_pellets.jpg'); ?>" alt="100% Virgin engineering grade plastic pellets used at Negizhi Industries" class="about-img" loading="lazy" />
             <div class="about-overlay-stat">
               <span class="stat-number">100%</span>
               <span class="stat-caption">Virgin Engineering Grade Polymers (DuPont, BASF, Sabic standard) with zero uncertified regrind</span>
@@ -1398,7 +1398,7 @@ if (!defined('ABSPATH')) {
         <div class="tooling-showcase-grid">
           
           <div class="tooling-visual-panel">
-            <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/extracted/mould_tooling.jpg'); ?>" alt="Multi-cavity injection mould die core assembly fabricated by Negizhi Industries" class="tooling-img" loading="lazy" />
+            <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/extracted/mould_tooling.jpg'); ?>" alt="Multi-cavity injection mould die core assembly fabricated by Negizhi Industries" class="tooling-img" loading="lazy" />
             <div class="tooling-caption">
               <span>Multi-Cavity Precision Runner Die Assembly for High-Volume Components</span>
             </div>
@@ -1522,7 +1522,7 @@ if (!defined('ABSPATH')) {
           <div class="geo-kicker">[ RAPID ESTIMATION // VALUE ENGINEERING ]</div>
           <h2 class="geo-section-title">Request for Quotation (RFQ) &amp; Technical Estimator</h2>
           <p class="geo-section-subtitle">
-            Configure your technical component specifications to initiate a rapid engineering review with our proprietor Mathibharathi Dhanaraj.
+            Configure your technical component specifications to initiate a rapid engineering review with our technical engineering desk.
           </p>
         </div>
 
@@ -1580,8 +1580,19 @@ if (!defined('ABSPATH')) {
 
             <div class="form-row">
               <div class="form-group">
-                <label for="rfqContactName">Your Name &amp; Company</label>
-                <input type="text" id="rfqContactName" placeholder="e.g. Rajesh Kumar - Precision Gears Pvt Ltd" required />
+                <label for="rfqContactName">Your Full Name</label>
+                <input type="text" id="rfqContactName" placeholder="e.g. Rajesh Kumar" required />
+              </div>
+              <div class="form-group">
+                <label for="rfqCompany">Company / Industry Name</label>
+                <input type="text" id="rfqCompany" placeholder="e.g. Precision Gears Pvt Ltd" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rfqEmail">Business Email Address</label>
+                <input type="email" id="rfqEmail" placeholder="e.g. rajesh@precisiongears.com" required />
               </div>
               <div class="form-group">
                 <label for="rfqPhone">Phone / WhatsApp Number</label>
@@ -1595,9 +1606,9 @@ if (!defined('ABSPATH')) {
             </div>
 
             <div class="rfq-actions-row">
-              <button type="submit" class="btn-geo-primary btn-large">
+              <button type="submit" class="btn-geo-primary btn-large" id="rfqSubmitBtn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                <span>Submit Technical RFQ</span>
+                <span id="rfqSubmitText">Submit Technical RFQ</span>
               </button>
 
               <a href="https://wa.me/918610888097?text=Hi%20Negizhi%20Industries,%20I%20would%20like%20to%20get%20a%20quote%20for%20engineering%20plastic%20components." target="_blank" rel="noopener noreferrer" class="btn-geo-whatsapp">
@@ -1606,9 +1617,8 @@ if (!defined('ABSPATH')) {
               </a>
             </div>
 
-            <div id="rfqSuccessMsg" class="rfq-success-message">
-              ✓ Technical Inquiry Dispatched! Our engineering desk will review your specifications and connect with you shortly.
-            </div>
+            <div id="rfqSuccessMsg" class="rfq-success-message"></div>
+            <div id="rfqErrorMsg" class="rfq-error-message"></div>
 
           </form>
 
@@ -1633,7 +1643,7 @@ if (!defined('ABSPATH')) {
 
         <div class="contact-details-card">
           <div class="contact-card-header">
-            <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo.png'); ?>" alt="Negizhi Industries Logo" class="contact-logo" />
+            <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo.png'); ?>" alt="Negizhi Industries Logo" class="contact-logo" />
             <div>
               <h3 class="contact-company-title">NEGIZHI INDUSTRIES</h3>
               <p class="contact-proprietor">Proprietor: <strong>MATHIBHARATHI DHANARAJ</strong></p>
@@ -1686,7 +1696,7 @@ if (!defined('ABSPATH')) {
     <div class="container geo-footer-inner">
       <div class="footer-col-brand">
         <a href="#hero" class="footer-brand-link" aria-label="Negizhi Industries">
-          <img src"<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo-horizontal-clean.png'); ?>" alt="Negizhi Industries - Crafting Quality : Shaping Tomorrow" class="footer-logo" width="220" height="43" loading="lazy" />
+          <img src="<?php echo esc_url(NEGIZHI_PLUGIN_URL . 'assets/logo-horizontal-clean.png'); ?>" alt="Negizhi Industries - Crafting Quality : Shaping Tomorrow" class="footer-logo" width="220" height="43" loading="lazy" />
         </a>
         <p class="footer-tagline">CRAFTING QUALITY : SHAPING TOMORROW</p>
         <p class="footer-sub">Specialist for engineering plastic components in mechanical and electrical applications. Up to 200-Ton capacity in Coimbatore, Tamil Nadu, India.</p>

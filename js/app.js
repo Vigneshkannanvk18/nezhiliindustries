@@ -725,36 +725,109 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 4. TECHNICAL RFQ FORM SUBMISSION & WHATSAPP SYNC
+  // 4. TECHNICAL RFQ FORM SUBMISSION, WORDPRESS DATABASE SYNC & HOSTINGER SMTP
   // =========================================================================
   window.submitRFQ = function() {
-    const partName = document.getElementById('rfqPartName').value;
-    const material = document.getElementById('rfqMaterial').value;
-    const qty = document.getElementById('rfqQuantity').value;
-    const tooling = document.getElementById('rfqToolingStatus').value;
-    const contact = document.getElementById('rfqContactName').value;
-    const phone = document.getElementById('rfqPhone').value;
-    const notes = document.getElementById('rfqNotes').value || 'None';
+    const partName = document.getElementById('rfqPartName') ? document.getElementById('rfqPartName').value.trim() : '';
+    const material = document.getElementById('rfqMaterial') ? document.getElementById('rfqMaterial').value : '';
+    const qty = document.getElementById('rfqQuantity') ? document.getElementById('rfqQuantity').value : '';
+    const tooling = document.getElementById('rfqToolingStatus') ? document.getElementById('rfqToolingStatus').value : '';
+    const contact = document.getElementById('rfqContactName') ? document.getElementById('rfqContactName').value.trim() : '';
+    const company = document.getElementById('rfqCompany') ? document.getElementById('rfqCompany').value.trim() : '';
+    const email = document.getElementById('rfqEmail') ? document.getElementById('rfqEmail').value.trim() : '';
+    const phone = document.getElementById('rfqPhone') ? document.getElementById('rfqPhone').value.trim() : '';
+    const notes = document.getElementById('rfqNotes') ? document.getElementById('rfqNotes').value.trim() : '';
 
+    const submitBtn = document.getElementById('rfqSubmitBtn');
+    const submitText = document.getElementById('rfqSubmitText');
     const successMsg = document.getElementById('rfqSuccessMsg');
-    successMsg.style.display = 'block';
+    const errorMsg = document.getElementById('rfqErrorMsg');
 
-    const waText = encodeURIComponent(
-      `*Technical RFQ Inquiry - Negizhi Industries*\n` +
-      `--------------------------------\n` +
-      `*Part Name:* ${partName}\n` +
-      `*Material:* ${material}\n` +
-      `*Batch Quantity:* ${qty}\n` +
-      `*Tooling:* ${tooling}\n` +
-      `*Client:* ${contact} (${phone})\n` +
-      `*Notes:* ${notes}\n` +
-      `--------------------------------\n` +
-      `Submitted via official website`
-    );
+    if (successMsg) {
+      successMsg.style.display = 'none';
+      successMsg.innerHTML = '';
+    }
+    if (errorMsg) {
+      errorMsg.style.display = 'none';
+      errorMsg.innerHTML = '';
+    }
 
-    setTimeout(() => {
-      window.open(`https://wa.me/918610888097?text=${waText}`, '_blank');
-    }, 600);
+    if (submitBtn) submitBtn.disabled = true;
+    if (submitText) submitText.textContent = 'Transmitting Specifications...';
+
+    // If running inside WordPress with negizhi_ajax localized object
+    if (window.negizhi_ajax && window.negizhi_ajax.ajax_url) {
+      const formData = new FormData();
+      formData.append('action', 'negizhi_submit_rfq');
+      formData.append('security', window.negizhi_ajax.nonce || '');
+      formData.append('part_name', partName);
+      formData.append('material', material);
+      formData.append('quantity', qty);
+      formData.append('tooling_status', tooling);
+      formData.append('contact_name', contact);
+      formData.append('company_name', company);
+      formData.append('email', email);
+      formData.append('phone', phone);
+      formData.append('notes', notes);
+
+      fetch(window.negizhi_ajax.ajax_url, {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitText) submitText.textContent = 'Submit Technical RFQ';
+
+        if (data && data.success) {
+          if (successMsg) {
+            const refText = (data.data && data.data.lead_id) ? ` (Ref ID: #${data.data.lead_id})` : '';
+            successMsg.innerHTML = `✓ <strong>Technical RFQ Dispatched Successfully${refText}!</strong> Your component specifications have been logged in our system. Our engineering desk will review your tolerances and connect with you shortly.`;
+            successMsg.style.display = 'block';
+          }
+          const form = document.getElementById('rfqForm');
+          if (form) form.reset();
+        } else {
+          if (errorMsg) {
+            errorMsg.textContent = (data && data.data && data.data.message) ? data.data.message : 'Transmission failed. Please connect with our team directly via WhatsApp or Phone.';
+            errorMsg.style.display = 'block';
+          }
+        }
+      })
+      .catch(err => {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitText) submitText.textContent = 'Submit Technical RFQ';
+        if (errorMsg) {
+          errorMsg.textContent = 'Network communication error. Please try again or reach our engineering desk via WhatsApp.';
+          errorMsg.style.display = 'block';
+        }
+      });
+    } else {
+      // Standalone mode fallback (e.g. static preview)
+      if (submitBtn) submitBtn.disabled = false;
+      if (submitText) submitText.textContent = 'Submit Technical RFQ';
+      if (successMsg) {
+        successMsg.innerHTML = '✓ <strong>Technical Inquiry Dispatched!</strong> Our engineering desk will review your specifications and connect with you shortly.';
+        successMsg.style.display = 'block';
+      }
+      const waText = encodeURIComponent(
+        `*Technical RFQ Inquiry - Negizhi Industries*\n` +
+        `--------------------------------\n` +
+        `*Part Name:* ${partName}\n` +
+        `*Material:* ${material}\n` +
+        `*Batch Quantity:* ${qty}\n` +
+        `*Tooling:* ${tooling}\n` +
+        `*Client:* ${contact} (${company || 'Company'})\n` +
+        `*Email:* ${email || 'N/A'}\n` +
+        `*Phone:* ${phone}\n` +
+        `*Notes:* ${notes || 'None'}\n` +
+        `--------------------------------\n` +
+        `Submitted via official website`
+      );
+      setTimeout(() => {
+        window.open(`https://wa.me/918610888097?text=${waText}`, '_blank');
+      }, 600);
+    }
   };
 
   // =========================================================================

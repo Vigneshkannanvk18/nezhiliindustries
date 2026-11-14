@@ -1542,7 +1542,7 @@
           <div class="geo-kicker">[ RAPID ESTIMATION // VALUE ENGINEERING ]</div>
           <h2 class="geo-section-title">Request for Quotation (RFQ) &amp; Technical Estimator</h2>
           <p class="geo-section-subtitle">
-            Configure your technical component specifications to initiate a rapid engineering review with our proprietor Mathibharathi Dhanaraj.
+            Configure your technical component specifications to initiate a rapid engineering review with our technical engineering desk.
           </p>
         </div>
 
@@ -1600,8 +1600,19 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="rfqContactName">Your Name &amp; Company</label>
-                <input type="text" id="rfqContactName" placeholder="e.g. Rajesh Kumar - Precision Gears Pvt Ltd" required />
+                <label for="rfqContactName">Your Full Name</label>
+                <input type="text" id="rfqContactName" placeholder="e.g. Rajesh Kumar" required />
+              </div>
+              <div class="form-group">
+                <label for="rfqCompany">Company / Industry Name</label>
+                <input type="text" id="rfqCompany" placeholder="e.g. Precision Gears Pvt Ltd" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rfqEmail">Business Email Address</label>
+                <input type="email" id="rfqEmail" placeholder="e.g. rajesh@precisiongears.com" required />
               </div>
               <div class="form-group">
                 <label for="rfqPhone">Phone / WhatsApp Number</label>
@@ -1615,9 +1626,9 @@
             </div>
 
             <div class="rfq-actions-row">
-              <button type="submit" class="btn-geo-primary btn-large">
+              <button type="submit" class="btn-geo-primary btn-large" id="rfqSubmitBtn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                <span>Submit Technical RFQ</span>
+                <span id="rfqSubmitText">Submit Technical RFQ</span>
               </button>
 
               <a href="https://wa.me/918610888097?text=Hi%20Negizhi%20Industries,%20I%20would%20like%20to%20get%20a%20quote%20for%20engineering%20plastic%20components." target="_blank" rel="noopener noreferrer" class="btn-geo-whatsapp">
@@ -1626,9 +1637,8 @@
               </a>
             </div>
 
-            <div id="rfqSuccessMsg" class="rfq-success-message">
-              ✓ Technical Inquiry Dispatched! Our engineering desk will review your specifications and connect with you shortly.
-            </div>
+            <div id="rfqSuccessMsg" class="rfq-success-message"></div>
+            <div id="rfqErrorMsg" class="rfq-error-message"></div>
 
           </form>
 
