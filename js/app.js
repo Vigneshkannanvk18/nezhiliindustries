@@ -489,6 +489,60 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
 
+    nylon66: {
+      code: "POLYMER ID: PA66-UNFILLED // HIGH-HEAT POLYAMIDE",
+      name: "Nylon 66 Unfilled (Pure Polyamide 66)",
+      tag: "HIGH THERMAL & ABRASION RESISTANCE",
+      desc: "Nylon 66 features elevated crystallinity, a high 260°C crystalline melting point, superior creep resistance, and higher mechanical stiffness compared to standard Nylon 6. Exceptional for sliding friction parts and heat-exposed mechanical assemblies.",
+      tensile: "80 - 95 MPa",
+      temp: "115°C Continuous (200°C Short-term)",
+      wear: "Extremely Low Friction Coefficient",
+      water: "1.5% - 2.0% (Lower Moisture than PA6)",
+      apps: [
+        "High-Speed Cams & Pulleys",
+        "Thermal Insulating Spacers",
+        "Appliance Gears & Ratchets",
+        "Textile Machinery Guides",
+        "Precision Snap-Fit Connectors"
+      ]
+    },
+
+    nylon66gf50: {
+      code: "POLYMER ID: PA66-GF50 // 50% GLASS REINFORCED",
+      name: "Nylon 66 GF 50% (50% Glass-Filled Polyamide)",
+      tag: "ULTRA-HIGH RIGIDITY // METAL REPLACEMENT",
+      desc: "Heavily reinforced with 50% high-modulus glass fibers, delivering extraordinary tensile modulus, zero creep under massive structural loads, and high heat deflection. Directly replaces aluminum and zinc die-cast parts with 50% weight reduction.",
+      tensile: "210 - 245 MPa (Extreme Structural Load)",
+      temp: "160°C Continuous (235°C HDT)",
+      wear: "Extreme Surface Hardness & Fatigue Endurance",
+      water: "0.8% (Extreme Dimensional Stability)",
+      apps: [
+        "Heavy Structural Machine Braces",
+        "Die-Cast Aluminum Replacement Flanges",
+        "High-Pressure Pump Manifolds",
+        "Automotive Engine Compartment Brackets",
+        "Heavy Industrial Toggle Levers"
+      ]
+    },
+
+    noryl: {
+      code: "POLYMER ID: PPE-NORYL // MODIFIED POLYPHENYLENE ETHER",
+      name: "Noryl (Modified Polyphenylene Ether / PPE+PS)",
+      tag: "HYDROLYTIC STABILITY & ULTRA-LOW WATER ABSORPTION",
+      desc: "Noryl blends polyphenylene ether with polystyrene to provide exceptional hydrolytic stability (zero degradation in hot water or steam), continuous dielectric insulation, and virtually zero moisture absorption. Ideal for precision water pumps, switchgear, and terminal blocks.",
+      tensile: "55 - 75 MPa",
+      temp: "110°C Continuous (130°C HDT)",
+      wear: "Smooth Dimensional Wear Resistance",
+      water: "< 0.06% (Immune to Moisture Expansion)",
+      apps: [
+        "Submersible Pump Impellers & Diffusers",
+        "Electrical Switchgear Breaker Housings",
+        "Water Meter Bodies & Fluidic Sensors",
+        "Telecommunication Terminal Blocks",
+        "Solar Junction & Inverter Enclosures"
+      ]
+    },
+
     pc: {
       code: "POLYMER ID: PC-01 // OPTICAL & THERMAL POLYCARBONATE",
       name: "Polycarbonate (PC)",
@@ -525,6 +579,24 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
 
+    polystyrene: {
+      code: "POLYMER ID: PS-HIPS // HIGH IMPACT POLYSTYRENE",
+      name: "Polystyrene (HIPS / GPPS Engineering Grades)",
+      tag: "DIMENSIONAL ACCURACY & DIELECTRICS",
+      desc: "High Impact Polystyrene (HIPS) incorporates polybutadiene rubber for elevated impact toughness, rigid wall stability, and excellent electrical dielectric strength. High dimensional accuracy with fast cycle times and superb mold detail replication.",
+      tensile: "35 - 45 MPa",
+      temp: "75°C Continuous (85°C HDT)",
+      wear: "Moderate Wear (Rigid Surface)",
+      water: "< 0.10% (Excellent Moisture Seal)",
+      apps: [
+        "Instrument Display Bezels & Dial Panels",
+        "Electronic Sub-Enclosures & Cassettes",
+        "Refrigeration & Appliance Components",
+        "Disposable Technical Spools & Bobbins",
+        "Lightweight Protective Packaging Shrouds"
+      ]
+    },
+
     pps: {
       code: "POLYMER ID: PPS-GF40 // POLYPHENYLENE SULFIDE",
       name: "Polyphenylene Sulfide (PPS)",
@@ -558,6 +630,24 @@ document.addEventListener('DOMContentLoaded', () => {
         "Heavy-Duty Roller Liners",
         "Pneumatic O-Ring Seals",
         "Protective Bumper Caps"
+      ]
+    },
+
+    tpe: {
+      code: "POLYMER ID: TPE-FLEX // THERMOPLASTIC ELASTOMER",
+      name: "Thermoplastic Elastomer (TPE)",
+      tag: "FLEXIBLE SEALING & DUAL-SHOT OVERMOULDING",
+      desc: "Combines the elastic flexibility and sealing resilience of vulcanized rubber with the high-precision processing speed of thermoplastics. Delivers exceptional tactile soft-touch feel, weatherability, chemical resistance, and strong chemical bonding in 2K multi-material overmoulding.",
+      tensile: "12 - 25 MPa (High Elongation > 500%)",
+      temp: "80°C Continuous (Shore 40A to 90A)",
+      wear: "High Tear Strength & Surface Grip",
+      water: "< 0.20% (Weatherproof Barrier)",
+      apps: [
+        "Conformal Fluidic Gaskets & O-Ring Seals",
+        "Ergonomic Tool Handles & Grips",
+        "Flexible Cable Strain Relief Boots",
+        "Dust Caps & Vibration Bumper Dampers",
+        "Dual-Material Soft-Touch Enclosures"
       ]
     },
 
@@ -598,7 +688,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const tabButtons = document.querySelectorAll('.material-nav-btn');
+    const tabButtons = document.querySelectorAll('.material-nav-btn');
   const matDetailCode = document.getElementById('matDetailCode');
   const matDetailName = document.getElementById('matDetailName');
   const matDetailTag = document.getElementById('matDetailTag');
@@ -672,32 +762,120 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const header = document.getElementById('headerNav');
   const navLinks = document.querySelectorAll('.geo-nav-link');
+  const drawerNavLinks = document.querySelectorAll('.drawer-nav-link');
   const sections = document.querySelectorAll('section[id]');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.8)';
-      header.style.borderBottomColor = 'rgba(0, 229, 255, 0.3)';
-    } else {
-      header.style.boxShadow = 'none';
-      header.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+    if (header) {
+      if (window.scrollY > 40) {
+        header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.8)';
+        header.style.borderBottomColor = 'rgba(0, 229, 255, 0.3)';
+      } else {
+        header.style.boxShadow = 'none';
+        header.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+      }
     }
 
     // Update active nav link
     let current = '';
     sections.forEach(sec => {
-      const secTop = sec.offsetTop - 120;
+      const secTop = sec.offsetTop - 140;
       if (window.scrollY >= secTop) {
         current = sec.getAttribute('id');
       }
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
+    if (current) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+      drawerNavLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    }
+  }, { passive: true });
+
+  // =========================================================================
+  // 6. MOBILE & TABLET NAVIGATION DRAWER CONTROLLER
+  // =========================================================================
+  const mobileToggle = document.getElementById('mobileMenuToggle');
+  const mobileDrawer = document.getElementById('mobileNavDrawer');
+  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+
+  function openMobileMenu(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+    const drawer = mobileDrawer || document.getElementById('mobileNavDrawer');
+    const toggle = mobileToggle || document.getElementById('mobileMenuToggle');
+    if (!drawer) return;
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    if (toggle) {
+      toggle.classList.add('is-active');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    document.body.classList.add('menu-locked');
+  }
+
+  function closeMobileMenu(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+    const drawer = mobileDrawer || document.getElementById('mobileNavDrawer');
+    const toggle = mobileToggle || document.getElementById('mobileMenuToggle');
+    if (!drawer) return;
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    if (toggle) {
+      toggle.classList.remove('is-active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    document.body.classList.remove('menu-locked');
+  }
+
+  function toggleMobileMenu(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+    const drawer = mobileDrawer || document.getElementById('mobileNavDrawer');
+    if (!drawer) return;
+    if (drawer.classList.contains('is-open')) {
+      closeMobileMenu(e);
+    } else {
+      openMobileMenu(e);
+    }
+  }
+
+  // Global window bindings for instant onclick safety
+  window.openMobileMenu = openMobileMenu;
+  window.closeMobileMenu = closeMobileMenu;
+  window.toggleMobileMenu = toggleMobileMenu;
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', toggleMobileMenu);
+  }
+
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', closeMobileMenu);
+  }
+
+  if (drawerBackdrop) {
+    drawerBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  drawerNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('is-open')) {
+      closeMobileMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024 && mobileDrawer && mobileDrawer.classList.contains('is-open')) {
+      closeMobileMenu();
+    }
   });
 
 });
