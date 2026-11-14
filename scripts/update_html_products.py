@@ -84,7 +84,7 @@ new_products_block = '''        <!-- Master Production Line Showcase Banner -->
                 </div>
                 <div class="prod-spec-row">
                   <span class="spec-k">Moulding Unit:</span>
-                  <span class="spec-v">AAITIAN 200T / 90T Automatic</span>
+                  <span class="spec-v">Haitian 200T / 90T Automatic</span>
                 </div>
                 <div class="prod-spec-row">
                   <span class="spec-k">Tolerance:</span>

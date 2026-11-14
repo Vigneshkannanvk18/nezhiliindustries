@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Technical Overlay Badges
     ctx.fillStyle = "#94a3b8";
     ctx.font = "10px 'JetBrains Mono', monospace";
-    ctx.fillText("AAITIAN 200T AUTOMATIC // DIE BAR 510x510", 90, 315);
+    ctx.fillText("HAITIAN 200T AUTOMATIC // DIE BAR 510x510", 90, 315);
     ctx.fillText("PID CONTROLLED NOZZLE // 300°C PRE-HEATER", 510, 315);
   }
 
@@ -517,6 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
       wear: "Extreme Surface Hardness & Fatigue Endurance",
       water: "0.8% (Extreme Dimensional Stability)",
       apps: [
+        "Precision Spur & Helical Gears (High Modulus)",
         "Heavy Structural Machine Braces",
         "Die-Cast Aluminum Replacement Flanges",
         "High-Pressure Pump Manifolds",
