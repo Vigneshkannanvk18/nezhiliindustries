@@ -175,7 +175,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <!-- Mobile Navigation Menu Toggle -->
-        <button class="geo-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button" onclick="window.toggleMobileMenu ? window.toggleMobileMenu(event) : toggleMobileMenu(event)">
+        <button class="geo-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -186,13 +186,13 @@
 
   <!-- Mobile Navigation Drawer Overlay -->
   <div class="geo-mobile-drawer" id="mobileNavDrawer" aria-hidden="true">
-    <div class="drawer-backdrop" id="drawerBackdrop" onclick="window.closeMobileMenu ? window.closeMobileMenu(event) : closeMobileMenu(event)"></div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
     <div class="drawer-content">
       <div class="drawer-header">
         <a href="#hero" class="drawer-brand" aria-label="Negizhi Industries">
           <img src="assets/logo-horizontal-clean.png" alt="Negizhi Industries Logo" class="drawer-logo" />
         </a>
-        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu" type="button" onclick="window.closeMobileMenu ? window.closeMobileMenu(event) : closeMobileMenu(event)">
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu" type="button">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
@@ -233,6 +233,94 @@
       </div>
     </div>
   </div>
+
+  <!-- Instant Self-Executing Mobile Menu Controller -->
+  <script>
+    (function() {
+      var lastToggle = 0;
+      function openMobileMenu(e) {
+        if (e) {
+          if (typeof e.preventDefault === 'function') e.preventDefault();
+          if (typeof e.stopPropagation === 'function') e.stopPropagation();
+        }
+        var drawer = document.getElementById('mobileNavDrawer');
+        var toggle = document.getElementById('mobileMenuToggle');
+        if (!drawer) return;
+        drawer.classList.add('is-open');
+        drawer.setAttribute('aria-hidden', 'false');
+        if (toggle) {
+          toggle.classList.add('is-active');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+        document.body.classList.add('menu-locked');
+      }
+
+      function closeMobileMenu(e) {
+        if (e) {
+          if (typeof e.preventDefault === 'function') e.preventDefault();
+          if (typeof e.stopPropagation === 'function') e.stopPropagation();
+        }
+        var drawer = document.getElementById('mobileNavDrawer');
+        var toggle = document.getElementById('mobileMenuToggle');
+        if (!drawer) return;
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('menu-locked');
+      }
+
+      function toggleMobileMenu(e) {
+        if (e) {
+          if (e._toggleDone) return;
+          e._toggleDone = true;
+          if (typeof e.preventDefault === 'function') e.preventDefault();
+          if (typeof e.stopPropagation === 'function') e.stopPropagation();
+          if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
+        }
+        var now = Date.now();
+        if (now - lastToggle < 300) return;
+        lastToggle = now;
+
+        var drawer = document.getElementById('mobileNavDrawer');
+        if (!drawer) return;
+        if (drawer.classList.contains('is-open')) {
+          closeMobileMenu(e);
+        } else {
+          openMobileMenu(e);
+        }
+      }
+
+      window.openMobileMenu = openMobileMenu;
+      window.closeMobileMenu = closeMobileMenu;
+      window.toggleMobileMenu = toggleMobileMenu;
+
+      var toggleBtn = document.getElementById('mobileMenuToggle');
+      if (toggleBtn) {
+        toggleBtn.onclick = toggleMobileMenu;
+      }
+      var closeBtn = document.getElementById('drawerCloseBtn');
+      if (closeBtn) {
+        closeBtn.onclick = closeMobileMenu;
+      }
+      var backdrop = document.getElementById('drawerBackdrop');
+      if (backdrop) {
+        backdrop.onclick = closeMobileMenu;
+      }
+      var drawerLinks = document.querySelectorAll('.drawer-nav-link, .drawer-actions a');
+      drawerLinks.forEach(function(l) {
+        l.addEventListener('click', closeMobileMenu);
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMobileMenu();
+      });
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 1140) closeMobileMenu();
+      });
+    })();
+  </script>
 
   <main>
     <!-- ===================================================================
