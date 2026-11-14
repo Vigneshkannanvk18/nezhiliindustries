@@ -233,41 +233,55 @@ body.geometric-industrial-theme {
   transition: var(--transition-normal);
 }
 
+.geo-header .container {
+  max-width: 1400px;
+  width: 100%;
+}
+
 .geo-nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  width: 100%;
 }
 
 .geo-brand {
   display: flex;
   align-items: center;
   text-decoration: none;
+  margin-right: 28px;
+  flex-shrink: 0;
 }
 
 .geo-brand-logo {
-  height: 52px;
+  height: 38px;
   width: auto;
+  max-width: 195px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 229, 255, 0.25));
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 229, 255, 0.25));
 }
 
 .geo-nav-list {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 18px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .geo-nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  white-space: nowrap;
   transition: color var(--transition-fast);
   position: relative;
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
 .geo-nav-link:hover, .geo-nav-link.active {
@@ -288,7 +302,21 @@ body.geometric-industrial-theme {
 .geo-header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.geo-header-actions .btn-geo-ghost {
+  padding: 7px 13px;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.geo-header-actions .btn-geo-primary {
+  padding: 8px 16px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 /* Button System */
@@ -310,6 +338,7 @@ body.geometric-industrial-theme {
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(0, 229, 255, 0.35);
   transition: all var(--transition-normal);
+  white-space: nowrap;
 }
 
 .btn-geo-primary:hover {
@@ -339,6 +368,7 @@ body.geometric-industrial-theme {
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-normal);
+  white-space: nowrap;
 }
 
 .btn-geo-secondary:hover {
@@ -361,6 +391,7 @@ body.geometric-industrial-theme {
   font-weight: 600;
   text-decoration: none;
   transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 
 .btn-geo-ghost:hover {
@@ -3095,28 +3126,47 @@ img, svg, video {
   max-width: 100%;
 }
 
-/* ---- BREAKPOINT 1: LARGE TABLETS & SMALL LAPTOPS (<= 1200px) ---- */
-@media (max-width: 1200px) {
+/* ---- BREAKPOINT 1: COMPACT DESKTOPS & SMALL LAPTOPS (<= 1240px) ---- */
+@media (max-width: 1240px) {
   .container {
     max-width: 100%;
-    padding: 0 24px;
+    padding: 0 20px;
+  }
+  .geo-brand {
+    margin-right: 18px;
   }
   .geo-nav-list {
-    gap: 14px;
+    gap: 12px;
   }
   .geo-nav-link {
-    font-size: 13px;
+    font-size: 12.5px;
+  }
+  .geo-header-actions {
+    gap: 8px;
+    margin-left: 10px;
+  }
+  .geo-header-actions .btn-geo-primary {
+    padding: 7px 13px;
+    font-size: 12px;
+  }
+  .geo-header-actions .btn-geo-ghost {
+    padding: 7px 11px;
+    font-size: 12px;
   }
 }
 
-/* ---- BREAKPOINT 2: TABLETS LANDSCAPE & IPAD PRO (<= 1024px) ---- */
-@media (max-width: 1024px) {
+/* ---- BREAKPOINT 2: TABLETS & COMPACT VIEWPORTS (<= 1140px) ---- */
+@media (max-width: 1140px) {
   .geo-nav-menu {
     display: none !important; /* Switch to sleek mobile/tablet hamburger navigation */
   }
   .geo-mobile-toggle {
     display: flex !important;
   }
+}
+
+/* ---- BREAKPOINT 3: TABLETS & IPAD PRO (<= 1024px) ---- */
+@media (max-width: 1024px) {
   .geo-header-actions {
     gap: 10px;
   }
